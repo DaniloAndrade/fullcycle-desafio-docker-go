@@ -1,0 +1,16 @@
+FROM golang:1.18-alpine as builder
+
+WORKDIR /usr/src/app
+
+COPY src/ .
+
+RUN GOOS=linux go build ./main.go
+
+
+FROM scratch
+
+WORKDIR /app
+
+COPY --from=builder /usr/src/app/main .
+
+CMD ["/app/main"]
