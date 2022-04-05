@@ -66,3 +66,4 @@ REPOSITORY                           TAG       IMAGE ID       CREATED        SIZ
 daniloandrade/fullcycle-desafio-go   latest    74d842b82600   16 hours ago   1.75MB
 
 ```
+...
